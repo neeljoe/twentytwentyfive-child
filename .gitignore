@@ -1,9 +1,8 @@
 # Node modules
 node_modules/
-
-# Vite output cache
-.vite/
-
+# Ignore Vite cache EXCEPT manifest.json
+.vite/*
+!.vite/manifest.json
 # Optional: MacOS junk
 .DS_Store
 
