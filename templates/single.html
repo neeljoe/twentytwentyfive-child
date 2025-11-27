@@ -1,26 +1,95 @@
 <!-- wp:template-part {"slug":"header"} /-->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--60)">
-	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
-		<!-- wp:post-title {"level":1} /-->
-		<!-- wp:post-featured-image {"aspectRatio":"3/2"} /-->
-		<!-- wp:pattern {"slug":"twentytwentyfive/hidden-written-by"} /-->
-		<!-- wp:post-content {"align":"full","layout":{"type":"constrained"}} /-->
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
-			<!-- wp:post-terms {"term":"post_tag","separator":"  ","className":"is-style-post-terms-1"} /-->
-		Hello  from single page
-		</div>
-		<!-- /wp:group -->
-		
-		<!-- wp:pattern {"slug":"twentytwentyfive/post-navigation"} /-->
-		<!-- wp:pattern {"slug":"twentytwentyfive/comments"} /-->
+<!-- wp:group {"tagName":"main","className":"tutorial-main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group tutorial-main">
+
+	<!-- wp:group {"className":"tutorial-breadcrumbs","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group tutorial-breadcrumbs">
+		<!-- Breadcrumb -->
+		<!-- wp:post-terms {"term":"category","prefix":"Tutorial Category: "} /-->
 	</div>
 	<!-- /wp:group -->
-	<!-- wp:pattern {"slug":"twentytwentyfive/more-posts"} /-->
+
+	<!-- wp:columns {"className":"tutorial-columns"} -->
+	<div class="wp-block-columns tutorial-columns">
+
+		<!-- MAIN CONTENT COLUMN (70%) -->
+		<!-- wp:column {"width":"70%","className":"tutorial-content-column"} -->
+		<div class="wp-block-column tutorial-content-column" style="flex-basis:70%">
+
+			<!-- Title -->
+			<!-- wp:post-title {"level":1,"className":"tutorial-title"} /-->
+
+			<!-- Metadata -->
+			<!-- wp:group {"className":"tutorial-meta","layout":{"type":"flex","justifyContent":"flex-start"}} -->
+			<div class="wp-block-group tutorial-meta">
+				<!-- wp:post-author-name {"prefix":"By "} /-->
+				<!-- wp:post-date {"format":"F j, Y","prefix":" | Published: "} /-->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Featured Image -->
+			<!-- wp:post-featured-image {"className":"tutorial-featured"} /-->
+
+			<!-- Table of Contents -->
+			<!-- wp:group {"className":"tutorial-toc"} -->
+			<div class="wp-block-group tutorial-toc">
+				<!-- wp:paragraph {"placeholder":"Table of Contents"} -->
+				<p><strong>Table of Contents</strong></p>
+				<!-- /wp:paragraph -->
+				<!-- wp:table-of-contents {"className":"tutorial-toc-list"} /-->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Tutorial Content -->
+			<!-- wp:post-content {"layout":{"type":"constrained"},"className":"tutorial-content"} /-->
+
+			<!-- Tags -->
+			<!-- wp:group {"className":"tutorial-tags"} -->
+			<div class="wp-block-group tutorial-tags">
+				<!-- wp:post-terms {"term":"post_tag","prefix":"Tags: "} /-->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Navigation -->
+			<!-- wp:pattern {"slug":"twentytwentyfive/post-navigation"} /-->
+
+		</div>
+		<!-- /wp:column -->
+
+		<!-- SIDEBAR COLUMN (30%) -->
+		<!-- wp:column {"width":"30%","className":"tutorial-sidebar-column"} -->
+		<div class="wp-block-column tutorial-sidebar-column" style="flex-basis:30%">
+
+			<!-- Sticky Sidebar Box -->
+			<!-- wp:group {"className":"tutorial-sidebar","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group tutorial-sidebar">
+
+				<!-- Category Navigation -->
+				<!-- wp:heading {"level":3} -->
+				<h3>Browse Tutorials</h3>
+				<!-- /wp:heading -->
+				
+				<!-- wp:categories {"showHierarchy":true,"className":"tutorial-category-list"} /-->
+
+				<!-- Related Posts -->
+				<!-- wp:heading {"level":3} -->
+				<h3>Related Topics</h3>
+				<!-- /wp:heading -->
+
+				<!-- wp:latest-posts {"postsToShow":5,"displayPostDate":false,"className":"tutorial-related-posts"} /-->
+
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:column -->
+
+	</div>
+	<!-- /wp:columns -->
+
 </main>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer"} /-->
+
