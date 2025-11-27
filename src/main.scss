@@ -68,4 +68,12 @@
 .tutorial-related-posts {
   margin-top: 10px;
 }
+.tutorial-main.alignwide {
+  max-width: var(--wp--style--global--wide-size);
+  margin: 0 auto;
+}
+
+.tutorial-columns.alignwide {
+  gap: 40px;
+}
 
